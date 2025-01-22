@@ -14,16 +14,18 @@ const path = "calendar/bislett.ics";
 console.log(`Scraping URL «${eventsUrl}»`);
 const scrapedEvents = await scrape(eventsUrl);
 
-const openEvents = getOpeningHoursUntil(addDays(new Date(), 21));
+const openingHours = getOpeningHoursUntil(addDays(new Date(), 21));
 
 console.log("Found", scrapedEvents.length, "events");
-const closedEvents = scrapedEvents.map(scrapedEventToCalendarEntry);
+const closedHours = scrapedEvents.map(scrapedEventToCalendarEntry);
 
-const allEvents = cutOpeningHoursByClosedHours(openEvents, closedEvents).map(
+const openingEventsWithCutouts = cutOpeningHoursByClosedHours(openingHours, closedHours).map(
     calendarEntryToEventAttributes
 );
 
-const events = ics.createEvents(allEvents, {
+const closedEvents = closedHours.map(calendarEntryToEventAttributes);
+
+const events = ics.createEvents([...openingEventsWithCutouts, ...closedEvents], {
     calName: "Bislett",
 });
 
