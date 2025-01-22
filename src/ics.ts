@@ -1,85 +1,79 @@
 import { TZDate } from "@date-fns/tz";
+import { add, addDays, differenceInCalendarDays, isPast } from "date-fns";
 import * as ics from "ics";
 import { ordinaryOpeningHours } from "./scrape";
-import type { DayOfWeek, ScrapedEvent } from "./types";
+import type { CalendarEntry, DayOfWeek, ScrapedEvent } from "./types";
 
-export function scrapedEventToIcsEvent(entry: ScrapedEvent): ics.EventAttributes | null {
+const openingHoursUrl = "https://www.bislettstadion.no/om-oss/apningstider";
+
+export function getOpeningHoursUntil(date: Date): CalendarEntry[] {
+    const today = new TZDate();
+    const numberOfDays = differenceInCalendarDays(date, today);
+
+    return Array(numberOfDays)
+        .fill(0)
+        .flatMap((_, i) => {
+            const day = addDays(today, i);
+            const weekday = day.getDay() as DayOfWeek;
+            const hours = ordinaryOpeningHours[weekday];
+
+            return hours.flatMap(({ from, to }) => {
+                return {
+                    type: "ordinary",
+                    month: day.getMonth(),
+                    day: day.getDate(),
+                    title: "Ordinære åpningstider",
+                    description: "Se åpningstider på " + openingHoursUrl,
+                    from: add(day, { hours: from.hours, minutes: from.minutes }),
+                    to: add(day, { hours: to.hours, minutes: to.minutes }),
+                };
+            });
+        });
+}
+
+export function scrapedEventToCalendarEntry(entry: ScrapedEvent): CalendarEntry {
     const assumedYear = new TZDate().getFullYear();
-    const date = new TZDate(assumedYear, entry.month, entry.day, "Europe/Oslo");
+    const createDate = (hours = 0, minutes = 0) =>
+        new TZDate(assumedYear, entry.month, entry.day, hours, minutes, "Europe/Oslo");
 
-    if (date.getTime() < Date.now()) {
-        date.setFullYear(date.getFullYear() + 1);
-    }
+    let date = createDate();
+    if (isPast(date)) date.setFullYear(date.getFullYear() + 1);
 
-    if (entry.type === "whole-day") {
-        const dayOfWeek = date.getDay() as DayOfWeek;
-        const openingHours = ordinaryOpeningHours[dayOfWeek];
-        const start = openingHours[0].from;
-        const stop = openingHours[openingHours.length - 1].to;
+    const dayOfWeek = date.getDay() as DayOfWeek;
+    const openingHours = ordinaryOpeningHours[dayOfWeek];
+    const defaultStart = openingHours[0].from;
+    const defaultStop = openingHours[openingHours.length - 1].to;
+    const start = entry.type === "whole-day" ? defaultStart : entry.from;
+    const stop = entry.type === "whole-day" || !entry.to ? defaultStop : entry.to;
 
-        return {
-            start: [
-                date.getFullYear(),
-                date.getMonth() + 1,
-                date.getDate(),
-                start.hours,
-                start.minutes,
-            ],
-            end: [
-                date.getFullYear(),
-                date.getMonth() + 1,
-                date.getDate(),
-                stop.hours,
-                stop.minutes,
-            ],
-            title: "Heldags: " + entry.title,
-            description: entry.details,
-        };
-    } else if (entry.type === "timed") {
-        const start = new TZDate(
-            assumedYear,
-            entry.month,
-            entry.day,
-            entry.from.hours,
-            entry.from.minutes
-        );
+    return {
+        from: createDate(start.hours, start.minutes),
+        to: createDate(stop.hours, stop.minutes),
+        title: entry.title,
+        description: entry.details,
+        type: "closed",
+    };
+}
 
-        let stop;
-        if (entry.to) {
-            stop = new TZDate(
-                assumedYear,
-                entry.month,
-                entry.day,
-                entry.to.hours,
-                entry.to.minutes
-            );
-        } else {
-            const dayOfWeek = date.getDay() as DayOfWeek;
-            const openingHours = ordinaryOpeningHours[dayOfWeek];
-            const endy = openingHours[openingHours.length - 1].to;
+export function calendarEntryToEventAttributes(entry: CalendarEntry): ics.EventAttributes {
+    const titlePrefix = entry.type === "closed" ? "Stengt" : "Åpent";
 
-            stop = new TZDate(assumedYear, entry.month, entry.day, endy.hours, endy.minutes);
-        }
-
-        return {
-            start: [
-                start.getFullYear(),
-                start.getMonth() + 1,
-                start.getDate(),
-                start.getHours(),
-                start.getMinutes(),
-            ],
-            end: [
-                stop.getFullYear(),
-                stop.getMonth() + 1,
-                stop.getDate(),
-                stop.getHours(),
-                stop.getMinutes(),
-            ],
-            title: "Hendelse: " + entry.title,
-            description: entry.details,
-        };
-    } else {
-        return null;
-    }
+    return {
+        start: [
+            entry.from.getFullYear(),
+            entry.from.getMonth() + 1,
+            entry.from.getDate(),
+            entry.from.getHours(),
+            entry.from.getMinutes(),
+        ],
+        end: [
+            entry.to.getFullYear(),
+            entry.to.getMonth() + 1,
+            entry.to.getDate(),
+            entry.to.getHours(),
+            entry.to.getMinutes(),
+        ],
+        title: `${titlePrefix}: ${entry.title}`,
+        description: entry.description,
+    };
 }
