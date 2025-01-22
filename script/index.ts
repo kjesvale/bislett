@@ -9,7 +9,7 @@ import {
 import { scrape } from "./scrape";
 
 const eventsUrl = "https://www.bislettstadion.no/terminliste";
-const path = "calendar/bislett.ics";
+const path = "bislett.ics";
 
 console.log(`Scraping URL «${eventsUrl}»`);
 const scrapedEvents = await scrape(eventsUrl);
