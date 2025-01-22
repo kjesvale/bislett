@@ -1,5 +1,5 @@
 import { TZDate } from "@date-fns/tz";
-import { add, addDays, differenceInCalendarDays, isPast } from "date-fns";
+import { add, addDays, differenceInCalendarDays, isPast, startOfDay } from "date-fns";
 import * as ics from "ics";
 import { ordinaryOpeningHours } from "./scrape";
 import type { CalendarEntry, DayOfWeek, ScrapedEvent } from "./types";
@@ -7,7 +7,7 @@ import type { CalendarEntry, DayOfWeek, ScrapedEvent } from "./types";
 const openingHoursUrl = "https://www.bislettstadion.no/om-oss/apningstider";
 
 export function getOpeningHoursUntil(date: Date): CalendarEntry[] {
-    const today = new TZDate();
+    const today = startOfDay(new TZDate());
     const numberOfDays = differenceInCalendarDays(date, today);
 
     return Array(numberOfDays)
@@ -17,17 +17,15 @@ export function getOpeningHoursUntil(date: Date): CalendarEntry[] {
             const weekday = day.getDay() as DayOfWeek;
             const hours = ordinaryOpeningHours[weekday];
 
-            return hours.flatMap(({ from, to }) => {
-                return {
-                    type: "ordinary",
-                    month: day.getMonth(),
-                    day: day.getDate(),
-                    title: "Ordinære åpningstider",
-                    description: "Se åpningstider på " + openingHoursUrl,
-                    from: add(day, { hours: from.hours, minutes: from.minutes }),
-                    to: add(day, { hours: to.hours, minutes: to.minutes }),
-                };
-            });
+            return hours.flatMap(({ from, to }) => ({
+                type: "ordinary",
+                month: day.getMonth(),
+                day: day.getDate(),
+                title: "Ordinære åpningstider",
+                description: "Se åpningstider på " + openingHoursUrl,
+                from: add(day, { hours: from.hours, minutes: from.minutes }),
+                to: add(day, { hours: to.hours, minutes: to.minutes }),
+            }));
         });
 }
 
