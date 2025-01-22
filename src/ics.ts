@@ -75,3 +75,48 @@ export function calendarEntryToEventAttributes(entry: CalendarEntry): ics.EventA
         description: entry.description,
     };
 }
+
+export function cutOpeningHoursByClosedHours(
+    openTimespans: CalendarEntry[],
+    closedTimespans: CalendarEntry[]
+) {
+    const isOverlapping = (open: CalendarEntry, closed: CalendarEntry) => {
+        return open.from < closed.to && open.to > closed.from;
+    };
+
+    const splitTimespan = (open: CalendarEntry, closed: CalendarEntry) => {
+        let result = [];
+
+        if (open.from < closed.from) {
+            result.push({ ...open, from: open.from, to: closed.from });
+        }
+
+        if (open.to > closed.to) {
+            result.push({ ...open, from: closed.to, to: open.to });
+        }
+
+        return result;
+    };
+
+    let adjustedTimespans: CalendarEntry[] = [];
+
+    for (let open of openTimespans) {
+        let splitResults = [open];
+
+        for (let closed of closedTimespans) {
+            let tempResults: any = [];
+            for (let current of splitResults) {
+                if (isOverlapping(current, closed)) {
+                    tempResults = tempResults.concat(splitTimespan(current, closed));
+                } else {
+                    tempResults.push(current);
+                }
+            }
+            splitResults = tempResults;
+        }
+
+        adjustedTimespans = adjustedTimespans.concat(splitResults);
+    }
+
+    return adjustedTimespans;
+}
