@@ -19,7 +19,7 @@ jobs:
               run: bun install
 
             - name: Build website and calendar
-              run: bun build
+              run: bun run build
 
             - name: Upload artifacts
               uses: actions/upload-pages-artifact@v1
