@@ -5,7 +5,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    make-calendar:
+    build:
         name: Build calendar and website
         runs-on: ubuntu-latest
         steps:
