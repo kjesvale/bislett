@@ -1,7 +1,6 @@
 import { addDays } from "date-fns";
 import * as ics from "ics";
 import {
-    bislettTime,
     calendarEntryToEventAttributes,
     cutOpeningHoursByClosedHours,
     getOpeningHoursUntil,
@@ -15,7 +14,7 @@ const path = "bislett.ics";
 console.log(`Scraping URL «${eventsUrl}»`);
 const scrapedEvents = await scrape(eventsUrl);
 
-const openingHours = getOpeningHoursUntil(addDays(bislettTime(), 21));
+const openingHours = getOpeningHoursUntil(addDays(new Date(), 21));
 
 console.log("Found", scrapedEvents.length, "events");
 const closedHours = scrapedEvents.map(scrapedEventToCalendarEntry);
