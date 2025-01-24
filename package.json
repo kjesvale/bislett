@@ -1,26 +1,27 @@
 {
-  "name": "bislett",
-  "module": "index.ts",
-  "type": "module",
-  "scripts": {
-    "start": "bun run --watch src/index.ts"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "prettier": {
-    "tabWidth": 4,
-    "printWidth": 100,
-    "arrowParens": "avoid"
-  },
-  "dependencies": {
-    "@date-fns/tz": "^1.2.0",
-    "@date-fns/utc": "^2.1.0",
-    "cheerio": "^1.0.0",
-    "date-fns": "^4.1.0",
-    "ics": "^3.8.1"
-  }
+    "name": "bislett",
+    "module": "index.ts",
+    "type": "module",
+    "scripts": {
+        "start": "bun run --watch src/calendar/make.ts",
+        "build": "./build.sh "
+    },
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "printWidth": 100,
+        "arrowParens": "avoid"
+    },
+    "dependencies": {
+        "@date-fns/tz": "^1.2.0",
+        "@date-fns/utc": "^2.1.0",
+        "cheerio": "^1.0.0",
+        "date-fns": "^4.1.0",
+        "ics": "^3.8.1"
+    }
 }
