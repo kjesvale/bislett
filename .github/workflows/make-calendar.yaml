@@ -1,7 +1,7 @@
 name: Make calendar for Bislett Stadion
 on:
-    schedule:
-        - cron: "*/5 * * * *"
+    #schedule:
+    #    - cron: "*/5 * * * *"
     workflow_dispatch:
 
 jobs:
@@ -9,14 +9,25 @@ jobs:
         name: Make calendar
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Bun
             - uses: oven-sh/setup-bun@v2
+
             - name: Install dependencies
               run: bun install
+
             - name: Scrape website and make the calendar
-              run: bun script/index.ts
-            - name: Upload output as artifact
-              uses: actions/upload-artifact@v4
+              run: bun run src/calendar/make.ts
+
+            - name: Move files to output folder
+              run: mv
+
+            - name: Deploy to Github Pages
+              uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  name: calendar
-                  path: bislett.ics
+                  branch: gh-pages
+                  folder: .
+                  clean: true
+                  token: ${{ secrets.GITHUB_TOKEN }}
