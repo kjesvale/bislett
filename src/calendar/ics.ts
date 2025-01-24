@@ -2,12 +2,12 @@ import { TZDate } from "@date-fns/tz";
 import { add, addDays, differenceInCalendarDays, isPast, startOfDay } from "date-fns";
 import * as ics from "ics";
 import { ordinaryOpeningHours } from "./scrape";
-import type { CalendarEntry, DayOfWeek, ScrapedEvent } from "./types";
+import { Timezone, type CalendarEntry, type DayOfWeek, type ScrapedEvent } from "./types";
 
 const openingHoursUrl = "https://www.bislettstadion.no/om-oss/apningstider";
 
 export function getOpeningHoursUntil(date: Date): CalendarEntry[] {
-    const today = startOfDay(new TZDate());
+    const today = startOfDay(bislettTime());
     const numberOfDays = differenceInCalendarDays(date, today);
 
     return Array(numberOfDays)
@@ -30,9 +30,9 @@ export function getOpeningHoursUntil(date: Date): CalendarEntry[] {
 }
 
 export function scrapedEventToCalendarEntry(entry: ScrapedEvent): CalendarEntry {
-    const assumedYear = new TZDate().getFullYear();
+    const assumedYear = bislettTime().getFullYear();
     const createDate = (hours = 0, minutes = 0) =>
-        new TZDate(assumedYear, entry.month, entry.day, hours, minutes, "Europe/Oslo");
+        bislettTime(new TZDate(assumedYear, entry.month, entry.day, hours, minutes));
 
     let date = createDate();
     if (isPast(date)) date.setFullYear(date.getFullYear() + 1);
@@ -57,6 +57,8 @@ export function calendarEntryToEventAttributes(entry: CalendarEntry): ics.EventA
     const titlePrefix = entry.type === "closed" ? "Stengt" : "Åpent";
 
     return {
+        title: `${titlePrefix}: ${entry.title}`,
+        description: entry.description,
         start: [
             entry.from.getFullYear(),
             entry.from.getMonth() + 1,
@@ -71,8 +73,8 @@ export function calendarEntryToEventAttributes(entry: CalendarEntry): ics.EventA
             entry.to.getHours(),
             entry.to.getMinutes(),
         ],
-        title: `${titlePrefix}: ${entry.title}`,
-        description: entry.description,
+        startInputType: "utc",
+        endInputType: "utc",
     };
 }
 
@@ -119,4 +121,8 @@ export function cutOpeningHoursByClosedHours(
     }
 
     return adjustedTimespans;
+}
+
+export function bislettTime(date: TZDate = new TZDate()) {
+    return date.withTimeZone(Timezone.Bislett);
 }

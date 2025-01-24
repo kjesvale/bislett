@@ -1,3 +1,7 @@
+export enum Timezone {
+    Bislett = "Europe/Oslo",
+}
+
 export enum DayOfWeek {
     Monday = 1,
     Tuesday = 2,
