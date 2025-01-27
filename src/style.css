@@ -1,0 +1,79 @@
+@import "reset.css";
+
+:root {
+    --primary: hsl(30, 78%, 55%);
+    --font-color: #213547;
+    --font-body: system-ui, Helvetica, Arial, sans-serif;
+    --font-heading: ui-serif, Georgia, Cambria, Times New Roman, serif;
+    --background-color: #ffffff;
+
+    color-scheme: light dark;
+    color: var(--font-color);
+    background-color: var(--background-color);
+
+    font-size: 1rem;
+    font-family: var(--font-body);
+    touch-action: manipulation;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: hsl(30, 78%, 55%);
+        --font-color: rgba(255, 255, 255, 0.87);
+        --font-color-muted: rgba(255, 255, 255, 0.6);
+        --background-color: #242424;
+    }
+}
+
+body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h1 span {
+    font-size: 6rem;
+    line-height: 1rem;
+    color: var(--primary);
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    max-width: 40ch;
+}
+
+.kalender p {
+    font-size: 2rem;
+}
+
+.kalender p em {
+    font-style: normal;
+    color: var(--primary);
+    text-decoration: underline wavy;
+    text-underline-offset: 0.5rem;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border: 3px solid var(--primary);
+    border-radius: 1.75rem;
+    height: 3rem;
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+a:hover {
+    background-color: var(--primary);
+    text-shadow: 2px 2px 0px var(--background-color);
+}

@@ -2,11 +2,23 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Stadion</title>
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content="Når er Bislett åpen?" />
+        <title>Bislett stadion</title>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏃</text></svg>"
+        />
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <h1>Stadion.</h1>
-        <p>Last ned kalenderen: <a href="bislett.ics">bislett.ics</a></p>
+        <h1>Bislett stadion<span>.</span></h1>
+
+        <div class="kalender" style="display: none">
+            <p>banen er <em>åpen</em> i 5 minutter til</p>
+        </div>
+        <p>Abonner på kalenderen for å holde deg oppdatert på åpningstider og hendelser.</p>
+
+        <p><a href="./bislett.ics" class="button">Hent kalender</a></p>
     </body>
 </html>
