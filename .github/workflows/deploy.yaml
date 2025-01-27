@@ -1,8 +1,11 @@
 name: Build and deploy
 on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
     schedule:
         - cron: "0 3 */1 * *" # Every night at 03:00
-    workflow_dispatch:
 
 jobs:
     build:
