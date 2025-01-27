@@ -1,9 +1,7 @@
-import { TZDate } from "@date-fns/tz";
 import { add, addDays, differenceInCalendarDays, isPast, startOfDay } from "date-fns";
-import { toZonedTime } from "date-fns-tz";
 import * as ics from "ics";
 import { ordinaryOpeningHours } from "./scrape";
-import { Timezone, type CalendarEntry, type DayOfWeek, type ScrapedEvent } from "./types";
+import { type CalendarEntry, type DayOfWeek, type ScrapedEvent } from "./types";
 
 const openingHoursUrl = "https://www.bislettstadion.no/om-oss/apningstider";
 
@@ -33,7 +31,7 @@ export function getOpeningHoursUntil(date: Date): CalendarEntry[] {
 export function scrapedEventToCalendarEntry(entry: ScrapedEvent): CalendarEntry {
     const assumedYear = new Date().getFullYear();
     const createDate = (hours = 0, minutes = 0) =>
-        new TZDate(assumedYear, entry.month, entry.day, hours, minutes);
+        new Date(assumedYear, entry.month, entry.day, hours, minutes);
 
     let date = createDate();
     if (isPast(date)) date.setFullYear(date.getFullYear() + 1);
@@ -57,29 +55,26 @@ export function scrapedEventToCalendarEntry(entry: ScrapedEvent): CalendarEntry 
 export function calendarEntryToEventAttributes(entry: CalendarEntry): ics.EventAttributes {
     const titlePrefix = entry.type === "closed" ? "Stengt" : "Åpent";
 
-    const fromOslo = toZonedTime(entry.from, Timezone.Bislett);
-    const toOslo = toZonedTime(entry.to, Timezone.Bislett);
-
     const attributes: ics.EventAttributes = {
         title: `${titlePrefix}: ${entry.title}`,
         description: entry.description,
         start: [
-            fromOslo.getFullYear(),
-            fromOslo.getMonth() + 1,
-            fromOslo.getDate(),
-            fromOslo.getHours(),
-            fromOslo.getMinutes(),
+            entry.from.getFullYear(),
+            entry.from.getMonth() + 1,
+            entry.from.getDate(),
+            entry.from.getHours(),
+            entry.from.getMinutes(),
         ],
         end: [
-            toOslo.getFullYear(),
-            toOslo.getMonth() + 1,
-            toOslo.getDate(),
-            toOslo.getHours(),
-            toOslo.getMinutes(),
+            entry.to.getFullYear(),
+            entry.to.getMonth() + 1,
+            entry.to.getDate(),
+            entry.to.getHours(),
+            entry.to.getMinutes(),
         ],
+        startOutputType: "local",
+        endOutputType: "local",
     };
-
-    console.log("Attributes:", attributes);
 
     return attributes;
 }
