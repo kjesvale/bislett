@@ -1,7 +1,13 @@
 import { add, addDays, differenceInCalendarDays, isPast, startOfDay } from "date-fns";
 import * as ics from "ics";
+import {
+    Timezone,
+    timezoneInformation,
+    type CalendarEntry,
+    type DayOfWeek,
+    type ScrapedEvent,
+} from "./definitions";
 import { ordinaryOpeningHours } from "./scrape";
-import { type CalendarEntry, type DayOfWeek, type ScrapedEvent } from "./types";
 
 const openingHoursUrl = "https://www.bislettstadion.no/om-oss/apningstider";
 
@@ -123,3 +129,27 @@ export function cutOpeningHoursByClosedHours(
 
     return adjustedTimespans;
 }
+
+export const createCalendar = (events: ics.EventAttributes[]): string => {
+    const calendar = ics.createEvents(events, {
+        calName: "Bislett",
+    });
+
+    if (calendar.value) {
+        const beginEventMarker = "BEGIN:VEVENT";
+        const splitByEvents = calendar.value.split(beginEventMarker);
+        const withTimezoneDefinitions =
+            splitByEvents[0] +
+            timezoneInformation +
+            beginEventMarker +
+            splitByEvents.slice(1).join(beginEventMarker);
+
+        const withTimezonePrefixes = withTimezoneDefinitions
+            .replaceAll("DTSTART:", `DTSTART;TZID=${Timezone.Oslo}:`)
+            .replaceAll("DTEND:", `DTEND;TZID=${Timezone.Oslo}:`);
+
+        return withTimezonePrefixes;
+    } else {
+        throw new Error("Error when creating events:", calendar.error);
+    }
+};

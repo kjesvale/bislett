@@ -1,15 +1,13 @@
 import { addDays } from "date-fns";
-import * as ics from "ics";
+import { eventsUrl, path } from "./definitions";
 import {
     calendarEntryToEventAttributes,
+    createCalendar,
     cutOpeningHoursByClosedHours,
     getOpeningHoursUntil,
     scrapedEventToCalendarEntry,
 } from "./ics";
 import { scrape } from "./scrape";
-
-const eventsUrl = "https://www.bislettstadion.no/terminliste";
-const path = "bislett.ics";
 
 console.log(`Scraping URL «${eventsUrl}»`);
 const scrapedEvents = await scrape(eventsUrl);
@@ -25,14 +23,8 @@ const openingEventsWithCutouts = cutOpeningHoursByClosedHours(openingHours, clos
 
 const closedEvents = closedHours.map(calendarEntryToEventAttributes);
 
-const events = ics.createEvents([...openingEventsWithCutouts, ...closedEvents], {
-    calName: "Bislett",
-});
+const calendar = createCalendar([...openingEventsWithCutouts, ...closedEvents]);
 
-if (events.value) {
-    await Bun.write(path, events.value);
+await Bun.write(path, calendar);
 
-    console.log("Written to file", path);
-} else {
-    console.error("Error when creating events:", events.error);
-}
+console.log("Written to file", path);

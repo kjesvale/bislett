@@ -1,5 +1,5 @@
 import { load } from "cheerio";
-import { DayOfWeek, type ClockTime, type ScrapedEvent, type TimeRange } from "./types";
+import { DayOfWeek, type ClockTime, type ScrapedEvent, type TimeRange } from "./definitions";
 
 export const ordinaryOpeningHours: Record<DayOfWeek, TimeRange[]> = {
     [DayOfWeek.Monday]: [

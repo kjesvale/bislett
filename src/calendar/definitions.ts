@@ -1,5 +1,8 @@
+export const eventsUrl = "https://www.bislettstadion.no/terminliste";
+export const path = "bislett.ics";
+
 export enum Timezone {
-    Bislett = "Europe/Oslo",
+    Oslo = "Europe/Oslo",
 }
 
 export enum DayOfWeek {
@@ -46,3 +49,22 @@ export type CalendarEntry = {
     from: Date;
     to: Date;
 };
+
+export const timezoneInformation = `
+BEGIN:VTIMEZONE
+TZID:${Timezone.Oslo}
+BEGIN:STANDARD
+DTSTART:19701025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+END:VTIMEZONE
+
+`;
