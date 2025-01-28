@@ -28,7 +28,9 @@
 body {
     padding: 2rem;
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
+    font-size: 1.25rem;
     gap: 1.5rem;
 }
 
@@ -43,9 +45,12 @@ h1 span {
 }
 
 p {
-    font-size: 1.25rem;
     line-height: 1.5;
     max-width: 40ch;
+}
+
+.kalender {
+    display: none;
 }
 
 .kalender p {
@@ -59,13 +64,12 @@ p {
     text-underline-offset: 0.5rem;
 }
 
-a {
+.hent-kalender a {
     display: flex;
     align-items: center;
     width: fit-content;
-    font-size: 1.5rem;
     padding: 1.5rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
     border: 3px solid var(--primary);
     border-radius: 1.75rem;
     height: 3rem;
@@ -73,7 +77,16 @@ a {
     color: var(--font-color);
 }
 
-a:hover {
+.hent-kalender a:hover {
+    color: var(--background-color);
     background-color: var(--primary);
-    text-shadow: 2px 2px 0px var(--background-color);
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
