@@ -1,5 +1,5 @@
 rm -rf build
 mkdir build
-bun run src/calendar/make.ts
+bun run src/calendar/index.ts
 mv bislett.ics build
-cp src/index.html build
+cp src/website/* build
