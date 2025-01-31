@@ -4,7 +4,8 @@
     "type": "module",
     "scripts": {
         "start": "bun run --watch src/calendar/index.ts",
-        "build": "./build.sh "
+        "build-website": "./build-website.sh",
+        "build-calendar": "./build-calendar.sh"
     },
     "devDependencies": {
         "@types/bun": "latest"

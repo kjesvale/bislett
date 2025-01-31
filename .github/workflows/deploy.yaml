@@ -1,4 +1,4 @@
-name: Build and deploy
+name: Update calendar
 on:
     workflow_dispatch:
     push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
     build:
-        name: Build
+        name: Make
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
@@ -21,8 +21,8 @@ jobs:
             - name: Install dependencies
               run: bun install
 
-            - name: Build website and calendar
-              run: bun run build
+            - name: Build calendar
+              run: bun run build-calendar
 
             - name: Upload artifacts
               uses: actions/upload-pages-artifact@v3
