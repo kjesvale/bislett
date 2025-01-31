@@ -1,0 +1,637 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-WR-CALNAME:Bislett
+X-PUBLISHED-TTL:PT1H
+
+BEGIN:VTIMEZONE
+TZID:Europe/Oslo
+BEGIN:STANDARD
+DTSTART;TZID=Europe/Oslo:19701025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART;TZID=Europe/Oslo:19700329T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:n8_H0RGgNAI_tfqTYzxMn
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250127T080000
+DTEND;TZID=Europe/Oslo:20250127T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:3UGbr3Bqs7ce7vwUQChO_
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250127T193000
+DTEND;TZID=Europe/Oslo:20250127T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:ZPNWSkqJZvKwSz1BxZYl3
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250128T080000
+DTEND;TZID=Europe/Oslo:20250128T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:y3wrVfvmK1aad12SFQBG3
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250128T193000
+DTEND;TZID=Europe/Oslo:20250128T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:Pj3al5tINREs7xg3YRrts
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250129T080000
+DTEND;TZID=Europe/Oslo:20250129T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:beAswECUfCpNf43f5zQRi
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250130T080000
+DTEND;TZID=Europe/Oslo:20250130T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:UqfioQrv6pNRycCcH5DSo
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250130T193000
+DTEND;TZID=Europe/Oslo:20250130T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:OT21Z66a_mf8JtkOd02Fo
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250131T080000
+DTEND;TZID=Europe/Oslo:20250131T120000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:MYXM-l95inBAz0EyybMAR
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250131T150000
+DTEND;TZID=Europe/Oslo:20250131T200000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:YMOkifnMnxPy_8kurYVb8
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250201T100000
+DTEND;TZID=Europe/Oslo:20250201T160000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:Y2mid4HdfscElgXFP5rYX
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250202T100000
+DTEND;TZID=Europe/Oslo:20250202T160000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:U18UERuWZmXPkaQI3ksh-
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250203T080000
+DTEND;TZID=Europe/Oslo:20250203T113000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:bIsFqZ0vOvg1xFTnc_CCJ
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250203T123000
+DTEND;TZID=Europe/Oslo:20250203T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:hsI-HPC20bh9BkqIm22-_
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250203T193000
+DTEND;TZID=Europe/Oslo:20250203T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:2lD7fOaUGpjzrIGL9Olzc
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250204T080000
+DTEND;TZID=Europe/Oslo:20250204T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:ZoBerK8VcCXuwXdhcuK4q
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250204T193000
+DTEND;TZID=Europe/Oslo:20250204T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:5mZb8UiQIjs9-yNQf3JIv
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250205T080000
+DTEND;TZID=Europe/Oslo:20250205T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:1FWL_fouBE4CHFuYkqBRB
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250206T080000
+DTEND;TZID=Europe/Oslo:20250206T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:ccTqvSAgmVy0uCcmRN4-R
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250206T193000
+DTEND;TZID=Europe/Oslo:20250206T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:oVqYi2ZI_2WIoWXAQ7OC4
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250207T080000
+DTEND;TZID=Europe/Oslo:20250207T120000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:UiscD2XCrO_IIK3gvz2g2
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250210T080000
+DTEND;TZID=Europe/Oslo:20250210T113000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:TdqusP5RbrH-RkmfcFKn8
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250210T123000
+DTEND;TZID=Europe/Oslo:20250210T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:cHaPOoxvQOm72dH9Oz-M4
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250210T193000
+DTEND;TZID=Europe/Oslo:20250210T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:gXy_T1KrGqGWFalyWHNSS
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250211T080000
+DTEND;TZID=Europe/Oslo:20250211T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:h3qZqU_hBpKPthWZbJAt0
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250211T193000
+DTEND;TZID=Europe/Oslo:20250211T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:s9RBG6C25_ynT_eh9SuCU
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250212T080000
+DTEND;TZID=Europe/Oslo:20250212T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:FygAtRNqDkXka0udlZ2Wl
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250213T080000
+DTEND;TZID=Europe/Oslo:20250213T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:sZNm_KZPf9hICvrJPnN1E
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250213T193000
+DTEND;TZID=Europe/Oslo:20250213T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:9jbLolVXyKI5R8arlEYbc
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250214T080000
+DTEND;TZID=Europe/Oslo:20250214T120000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:Qtr90CEV3fOmvmQOzO2W2
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250214T150000
+DTEND;TZID=Europe/Oslo:20250214T200000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:c0efKv093W1dDaX_ccQjD
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250215T100000
+DTEND;TZID=Europe/Oslo:20250215T160000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:5mJ6gahuuNlk9Z2Vpzcjk
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250216T100000
+DTEND;TZID=Europe/Oslo:20250216T160000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:sRveTMzgCQQXDcuCsPVN6
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250217T080000
+DTEND;TZID=Europe/Oslo:20250217T113000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:yeC1nFmuRMAgCf2NuR84T
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250217T123000
+DTEND;TZID=Europe/Oslo:20250217T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:cnv9FzZz1cBSybpSglF0x
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250217T193000
+DTEND;TZID=Europe/Oslo:20250217T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:ASazYau4htwzIQSy2VH6-
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250218T080000
+DTEND;TZID=Europe/Oslo:20250218T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:r4ogZPWENS-URFe_Fust2
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250218T193000
+DTEND;TZID=Europe/Oslo:20250218T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:oyYzK9m-p0w6LrnGcjXMF
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250219T080000
+DTEND;TZID=Europe/Oslo:20250219T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:NmVA7PTSebrkuEojk5Tsx
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250220T080000
+DTEND;TZID=Europe/Oslo:20250220T170000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:DkZwKyzi1kXqaVIJSFTtD
+SUMMARY:Ordinære åpningstider
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250220T193000
+DTEND;TZID=Europe/Oslo:20250220T220000
+DESCRIPTION:Se åpningstider på https://www.bislettstadion.no/om-oss/apnings
+	tider\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:bsRogsgdSf7NUM7h0wcY-
+SUMMARY:Stengt: Landslagstrening langhekk
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250131T120000
+DTEND;TZID=Europe/Oslo:20250131T150000
+DESCRIPTION:12:00-15:00 Innendørsbanen stengt fra 0-250m\n\nSe terminliste 
+	på https://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra h
+	ttps://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:4FrNHe-1NfvINUWVtAgL_
+SUMMARY:Stengt: Landslagstrening mellom/langdistanse
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250203T113000
+DTEND;TZID=Europe/Oslo:20250203T123000
+DESCRIPTION:11:30-12:30 Innendørsbanen stengt\n\nSe terminliste på https://
+	www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra https://bisl
+	ett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:25tCduTzeSGwQBE2TEO-o
+SUMMARY:Stengt: Bislett Indoor Marathon
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250207T120000
+DTEND;TZID=Europe/Oslo:20250207T200000
+DESCRIPTION:Stengt for trening fra kl 12:00\n\nSe terminliste på https://ww
+	w.bislettstadion.no/terminliste\n\nKalenderen er hentet fra https://bislet
+	t.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:UAwcaN-PZQZBJTw6fbp4j
+SUMMARY:Stengt: Bislett Indoor Marathon
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250208T100000
+DTEND;TZID=Europe/Oslo:20250208T160000
+DESCRIPTION:Stengt for trening\n\nSe terminliste på https://www.bislettstad
+	ion.no/terminliste\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:X1iGVSrN8ySKuc2b-Pllq
+SUMMARY:Stengt: Bislett Indoor Marathon
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250209T100000
+DTEND;TZID=Europe/Oslo:20250209T160000
+DESCRIPTION:Stengt for trening\n\nSe terminliste på https://www.bislettstad
+	ion.no/terminliste\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:IZE_VvlT60EMFZ2h7_AeR
+SUMMARY:Stengt: Landslagstrening mellom/langdistanse
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250210T113000
+DTEND;TZID=Europe/Oslo:20250210T123000
+DESCRIPTION:11:30-12:30 Innendørsbanen stengt\n\nSe terminliste på https://
+	www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra https://bisl
+	ett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:tzJ2vlSAwkqovvUkJ-3On
+SUMMARY:Stengt: Landslagstrening langhekk
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250214T120000
+DTEND;TZID=Europe/Oslo:20250214T150000
+DESCRIPTION:12:00-15:00 Innendørsbanen stengt fra 0-250m\n\nSe terminliste 
+	på https://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra h
+	ttps://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:iO5KGyykxcvFfDYqhtUF-
+SUMMARY:Stengt: Landslagstrening mellom/langdistanse
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250217T113000
+DTEND;TZID=Europe/Oslo:20250217T123000
+DESCRIPTION:11:30-12:30 Innendørsbanen stengt\n\nSe terminliste på https://
+	www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra https://bisl
+	ett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:ip6ETjCYDiYG3zHJxYG0i
+SUMMARY:Stengt: Landslagstrening langhekk
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250221T120000
+DTEND;TZID=Europe/Oslo:20250221T150000
+DESCRIPTION:12:00-15:00 Innendørsbanen stengt fra 0-250m\n\nSe terminliste 
+	på https://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra h
+	ttps://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:bNlq8jJJicD6H9GSf3cCI
+SUMMARY:Stengt: Bislett Distanseserie SK Vidar
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250222T100000
+DTEND;TZID=Europe/Oslo:20250222T160000
+DESCRIPTION:12:00 Innendørsbanen stengt for trening\n\nSe terminliste på ht
+	tps://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra https:
+	//bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:bjrvSjzeJYmcSWUKdpKN2
+SUMMARY:Stengt: Landslagstrening mellom/langdistanse
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250224T113000
+DTEND;TZID=Europe/Oslo:20250224T123000
+DESCRIPTION:11:30-12:30 Innendørsbanen stengt\n\nSe terminliste på https://
+	www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra https://bisl
+	ett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:veQ7S9V0NcnbLXjJdxwU8
+SUMMARY:Stengt: Landslagstrening langhekk
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250228T120000
+DTEND;TZID=Europe/Oslo:20250228T150000
+DESCRIPTION:12:00-15:00 Innendørsbanen stengt fra 0-250m\n\nSe terminliste 
+	på https://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra h
+	ttps://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:flqa5dUxLtSaoeDQKPEco
+SUMMARY:Stengt: Landslagstrening langhekk
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250307T120000
+DTEND;TZID=Europe/Oslo:20250307T150000
+DESCRIPTION:12:00-15:00 Innendørsbanen stengt fra 0-250m\n\nSe terminliste 
+	på https://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra h
+	ttps://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:uSXrE7uQHSx3di-hBE2RY
+SUMMARY:Stengt: Landslagstrening langhekk
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250314T120000
+DTEND;TZID=Europe/Oslo:20250314T150000
+DESCRIPTION:12:00-15:00 Innendørsbanen stengt fra 0-250m\n\nSe terminliste 
+	på https://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra h
+	ttps://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:27NLBr0yogND83qPlEh6O
+SUMMARY:Stengt: Landslagstrening langhekk
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250321T120000
+DTEND;TZID=Europe/Oslo:20250321T150000
+DESCRIPTION:12:00-15:00 Innendørsbanen stengt fra 0-250m\n\nSe terminliste 
+	på https://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra h
+	ttps://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:LG_afiq0didQKZQYIdqSq
+SUMMARY:Stengt: Bislett Distanseserie SK Vidar
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250322T100000
+DTEND;TZID=Europe/Oslo:20250322T160000
+DESCRIPTION:12:00 Innendørsbanen stengt for trening\n\nSe terminliste på ht
+	tps://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra https:
+	//bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:4dweqCaR0ss0LJ-IfYG4B
+SUMMARY:Stengt: Landslagstrening langhekk
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250328T120000
+DTEND;TZID=Europe/Oslo:20250328T150000
+DESCRIPTION:12:00-15:00 Innendørsbanen stengt fra 0-250m\n\nSe terminliste 
+	på https://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra h
+	ttps://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:Y3Y-s9hJ70PbL2CKOi5D4
+SUMMARY:Stengt: Landslagstrening langhekk
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250404T120000
+DTEND;TZID=Europe/Oslo:20250404T150000
+DESCRIPTION:12:00-15:00 Innendørsbanen stengt fra 0-250m\n\nSe terminliste 
+	på https://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra h
+	ttps://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:M9EsIjQxJZjtrRCoNlkGH
+SUMMARY:Stengt: Landslagstrening langhekk
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250411T120000
+DTEND;TZID=Europe/Oslo:20250411T150000
+DESCRIPTION:12:00-15:00 Innendørsbanen stengt fra 0-250m\n\nSe terminliste 
+	på https://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra h
+	ttps://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:Pr7pgLqmv3PjCdEmT2wLM
+SUMMARY:Stengt: Bislett Distanseserie SK Vidar
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250412T100000
+DTEND;TZID=Europe/Oslo:20250412T160000
+DESCRIPTION:12:00 Innendørsbanen stengt for trening\n\nSe terminliste på ht
+	tps://www.bislettstadion.no/terminliste\n\nKalenderen er hentet fra https:
+	//bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:OW7h1X2R-DOqoFs-HW10g
+SUMMARY:Stengt: BislettKarusellen St. Hanshaugen løpeklubb
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250415T080000
+DTEND;TZID=Europe/Oslo:20250415T220000
+DESCRIPTION:\n\nSe terminliste på https://www.bislettstadion.no/terminliste
+	\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:yLPb1I0GSGKuyNRTkXY4N
+SUMMARY:Stengt: Skjærtorsdag
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250417T080000
+DTEND;TZID=Europe/Oslo:20250417T220000
+DESCRIPTION:Stadion stengt\n\nSe terminliste på https://www.bislettstadion.
+	no/terminliste\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:dlSikejdzeGyy6vo2MFtz
+SUMMARY:Stengt: Langfredag
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250418T080000
+DTEND;TZID=Europe/Oslo:20250418T200000
+DESCRIPTION:Stadion stengt\n\nSe terminliste på https://www.bislettstadion.
+	no/terminliste\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:woCg7Iq_uNkq4EkNkDx8j
+SUMMARY:Stengt: Påskeaften
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250419T100000
+DTEND;TZID=Europe/Oslo:20250419T160000
+DESCRIPTION:Stadion stengt\n\nSe terminliste på https://www.bislettstadion.
+	no/terminliste\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:mp5hNQsW_QGpdHFiklg4J
+SUMMARY:Stengt: 1. Påskedag
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250420T100000
+DTEND;TZID=Europe/Oslo:20250420T160000
+DESCRIPTION:Stadion stengt\n\nSe terminliste på https://www.bislettstadion.
+	no/terminliste\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+BEGIN:VEVENT
+UID:-_Un_EK5ArEE7GZDwygEW
+SUMMARY:Stengt: 2. Påskedag
+DTSTAMP:20250131T113857Z
+DTSTART;TZID=Europe/Oslo:20250421T080000
+DTEND;TZID=Europe/Oslo:20250421T220000
+DESCRIPTION:Stadion stengt\n\nSe terminliste på https://www.bislettstadion.
+	no/terminliste\n\nKalenderen er hentet fra https://bislett.stadion.run
+END:VEVENT
+END:VCALENDAR

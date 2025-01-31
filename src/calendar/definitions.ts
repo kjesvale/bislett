@@ -1,5 +1,6 @@
 export const eventsUrl = "https://www.bislettstadion.no/terminliste";
-export const path = "bislett.ics";
+export const path = "kalender.ics";
+export const url = "https://bislett.stadion.run";
 
 export enum Timezone {
     Oslo = "Europe/Oslo",
