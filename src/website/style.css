@@ -46,30 +46,40 @@ h1 span {
 
 p {
     line-height: 1.5;
-    max-width: 40ch;
+    max-width: 55ch;
+    text-wrap: balance;
 }
 
-.kalender {
+.calendar {
     display: none;
 }
 
-.kalender p {
+.calendar p {
     font-size: 2rem;
 }
 
-.kalender p em {
+.calendar p em {
     font-style: normal;
     color: var(--primary);
     text-decoration: underline wavy;
     text-underline-offset: 0.5rem;
 }
 
-.hent-kalender a {
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttons a,
+.buttons button {
     display: flex;
     align-items: center;
     width: fit-content;
     padding: 1.5rem;
     margin: 2rem 0;
+    background: none;
     border: 3px solid var(--primary);
     border-radius: 1.75rem;
     height: 3rem;
@@ -77,16 +87,28 @@ p {
     color: var(--font-color);
 }
 
-.hent-kalender a:hover {
+.buttons button {
+    border-color: lightgray;
+}
+
+.buttons a:hover {
     color: var(--background-color);
     background-color: var(--primary);
 }
 
-footer a {
+.buttons button:hover {
+    color: var(--background-color);
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+footer a,
+p a {
     color: var(--primary);
     text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover,
+p a:hover {
     text-decoration: underline;
 }
