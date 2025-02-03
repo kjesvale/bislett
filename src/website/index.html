@@ -18,32 +18,44 @@
             <p>banen er <em>åpen</em> i 5 minutter til</p>
         </div>
 
-        <p>Abonner på kalenderen for å holde deg oppdatert på åpningstider og hendelser.</p>
+        <p>Abonner på kalenderen for å få oversikt over når banen er åpen for trening!</p>
 
         <div class="buttons">
-            <a href="webcal://kjesvale.github.io/bislett/kalender.ics" class="button">Abonner</a>
+            <a href="webcal://kjesvale.github.io/bislett/kalender.ics" class="button">
+                Hent kalender
+            </a>
             <button id="copy-calendar" onclick="copyCalendarLink()">Kopier lenke</button>
         </div>
 
         <p>
-            Noen enheter støtter ikke kalenderlenker. Hvis abonneringsknappen ikke fungerer, kopier
-            lenken og legg den manuelt til i kalenderappen din.
+            Hvis knappen over ikke fungerer, kan du kopiere lenken og lime den inn som et
+            kalenderabonnement i din foretrukne kalender.
         </p>
 
-        <h2>Hvordan fungerer det?</h2>
+        <h2>Hva er dette?</h2>
 
         <p>
-            Kalenderen oppdateres automatisk med åpningstider og hendelser, hentet fra terminlisten
-            på <a href="https://www.bislettstadion.no/">bislettstadion.no</a>.
+            Treningsmulighetene på Bislett er i utgangspunktet gratis og åpent for alle, men
+            <a href="https://www.bislettstadion.no/om-oss/apningstider">åpningstidene</a> varierer
+            og banen <a href="https://www.bislettstadion.no/terminliste">kan være stengt</a> på
+            helligdager eller på under arrangementer.
+        </p>
+
+        <p>
+            Her får du en kalender som automatisk oppdateres med åpningstider og hendelser, slik at
+            du enkelt kan sjekke om banen er åpen for trening.
         </p>
 
         <footer>Laget av <a href="https://github.com/kjesvale">Kjetil</a></footer>
+
+        <script>
+            function copyCalendarLink() {
+                navigator.clipboard
+                    .writeText("https://kjesvale.github.io/bislett/kalender.ics")
+                    .then(() => {
+                        document.getElementById("copy-calendar").innerText = "Kopiert!";
+                    });
+            }
+        </script>
     </body>
-    <script>
-        function copyCalendarLink() {
-            navigator.clipboard
-                .writeText("webcal://kjesvale.github.io/bislett/kalender.ics")
-                .then(() => (document.getElementById("copy-calendar").innerText = "Kopiert!"));
-        }
-    </script>
 </html>
