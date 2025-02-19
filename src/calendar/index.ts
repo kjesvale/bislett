@@ -7,6 +7,7 @@ import {
     getOpeningHoursUntil,
     scrapedEventToCalendarEntry,
 } from "./ics";
+import { createNotifications, getPreviousNotifications } from "./notifier";
 import { scrape } from "./scrape";
 
 console.log(`Scraping URL «${eventsUrl}»`);
@@ -28,3 +29,9 @@ const calendar = createCalendar([...openingEventsWithCutouts, ...closedEvents]);
 await Bun.write(path, calendar);
 
 console.log("Written to file", path);
+
+console.log("Getting previous notifications");
+const notifiedEntries = await getPreviousNotifications();
+
+console.log("Sending new notifications");
+await createNotifications(closedHours, notifiedEntries);

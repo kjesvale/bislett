@@ -16,6 +16,16 @@ export enum DayOfWeek {
     Sunday = 0,
 }
 
+export enum NtfyTopic {
+    Monday = "bislett-calendar-monday",
+    Tuesday = "bislett-calendar-tuesday",
+    Wednesday = "bislett-calendar-wednesday",
+    Thursday = "bislett-calendar-thursday",
+    Friday = "bislett-calendar-friday",
+    Saturday = "bislett-calendar-saturday",
+    Sunday = "bislett-calendar-sunday",
+}
+
 export type TimeRange = {
     from: ClockTime;
     to: ClockTime;
