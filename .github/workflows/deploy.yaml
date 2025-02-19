@@ -5,7 +5,7 @@ on:
         branches:
             - main
     schedule:
-        - cron: "0 3 */1 * *" # Every night at 03:00
+        - cron: "0 4-23 * * *" # Every hour between 04:00 and 23:00 UTC
 
 jobs:
     build:
