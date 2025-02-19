@@ -7,11 +7,15 @@
     --font-heading: ui-serif, Georgia, Cambria, Times New Roman, serif;
     --background-color: #ffffff;
 
+    --font-size: 1rem;
+    --font-size-xl: 2rem;
+    --gap: 1rem;
+    --gap-l: 1.25rem;
+
     color-scheme: light dark;
     color: var(--font-color);
     background-color: var(--background-color);
-
-    font-size: 1rem;
+    font-size: var(--font-size);
     font-family: var(--font-body);
     touch-action: manipulation;
 }
@@ -25,21 +29,29 @@
     }
 }
 
+@media (min-width: 500px) {
+    :root {
+        --font-size: 1.25rem;
+        --font-size-xl: 3rem;
+        --gap: 1.5rem;
+        --gap-l: 2rem;
+    }
+}
+
 body {
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    font-size: 1.25rem;
-    gap: 1.5rem;
+    gap: var(--gap);
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: var(--font-size-xl);
 }
 
 h1 span {
-    font-size: 6rem;
+    font-size: calc(var(--font-size-xl) * 2);
     line-height: 1rem;
     color: var(--primary);
 }
@@ -55,7 +67,7 @@ p {
 }
 
 .calendar p {
-    font-size: 2rem;
+    font-size: var(--font-size);
 }
 
 .calendar p em {
@@ -67,9 +79,11 @@ p {
 
 .buttons {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    margin: var(--gap-l) 0;
+    gap: var(--gap);
 }
 
 .buttons a,
@@ -78,11 +92,12 @@ p {
     align-items: center;
     width: fit-content;
     padding: 1.5rem;
-    margin: 2rem 0;
     background: none;
     border: 3px solid var(--primary);
     border-radius: 1.75rem;
     height: 3rem;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
     text-decoration: none;
     color: var(--font-color);
 }
