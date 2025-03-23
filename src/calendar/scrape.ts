@@ -117,13 +117,16 @@ function getIndexedMonth(value: string): number | null {
         Mar: 2,
         Apr: 3,
         Mai: 4,
+        May: 4,
         Jun: 5,
         Jul: 6,
         Aug: 7,
         Sep: 8,
         Okt: 9,
+        Oct: 9,
         Nov: 10,
         Des: 11,
+        Dec: 11,
     };
 
     return months[value];

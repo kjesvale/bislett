@@ -15,7 +15,14 @@ const scrapedEvents = await scrape(eventsUrl);
 const openingHours = getOpeningHoursUntil(addDays(new Date(), 21));
 
 console.log("Found", scrapedEvents.length, "events");
-const closedHours = scrapedEvents.map(scrapedEventToCalendarEntry);
+const closedHours = scrapedEvents.map(e => {
+    try {
+        return scrapedEventToCalendarEntry(e);
+    } catch (e) {
+        console.error("Failed to parse scraped event:\n", e);
+        process.exit(1);
+    }
+});
 
 const openingEventsWithCutouts = cutOpeningHoursByClosedHours(openingHours, closedHours).map(
     calendarEntryToEventAttributes
